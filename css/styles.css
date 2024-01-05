@@ -283,6 +283,7 @@ section {
     gap: 2rem;
     background: var(--second-bg-color);
     padding-bottom: 6rem;
+    overflow: hidden;
 }
 
 .heading {
@@ -348,10 +349,6 @@ span {
     position: relative;
     font-size: 1.9rem;
     margin: 2rem 0 3rem;
-}
-
-.sobremim.show-animate {
-    transition: opacity 0.5s ease 0.3s;
 }
 
 .btn-box.btns {
@@ -982,7 +979,7 @@ section:nth-child(odd) .animate.scroll,
 .contato.show-animate .animate.scroll,
 .projetos.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll  {
-    transition-delay: calc(.3s * var(--i));
+    transition-delay: calc(.1s * var(--i));
     width: 0;
 }
 
