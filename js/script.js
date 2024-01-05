@@ -60,3 +60,13 @@ window.onscroll = () => {
     
     contato.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+    // animation sobremim on scroll
+    window.addEventListener('scroll', function() {
+
+    let sobremim = document.querySelector('.sobremim');
+    let isElementVisible = sobremim.getBoundingClientRect().top <= window.innerHeight * 0.9;
+    
+    sobremim.classList.toggle('show-animate', isElementVisible);
+
+    });

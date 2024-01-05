@@ -350,6 +350,10 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.sobremim.show-animate {
+    transition: opacity 0.5s ease 0.3s;
+}
+
 .btn-box.btns {
     display: inline-block;
     width: 160px;
