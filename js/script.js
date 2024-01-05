@@ -62,11 +62,20 @@ window.onscroll = () => {
 }
 
     // animation sobremim on scroll
-    window.addEventListener('scroll', function() {
+    let isScrolling = false;
+
+window.addEventListener('scroll', function() {
+    if (!isScrolling) {
+        isScrolling = true;
+
         let sobremim = document.querySelector('.sobremim');
         let elementRect = sobremim.getBoundingClientRect();
         let isElementVisible = elementRect.top <= window.innerHeight * 0.9 && elementRect.bottom >= 0;
-    
+
         sobremim.classList.toggle('show-animate', isElementVisible);
-    });
-    
+
+        setTimeout(function() {
+            isScrolling = false;
+        }, 100); 
+    }
+});
