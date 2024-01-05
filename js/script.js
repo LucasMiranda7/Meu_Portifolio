@@ -62,20 +62,14 @@ window.onscroll = () => {
 }
 
     // animation sobremim on scroll
-    let isScrolling = false;
-
-window.addEventListener('scroll', function() {
-    if (!isScrolling) {
-        isScrolling = true;
-
+    window.addEventListener('scroll', function() {
         let sobremim = document.querySelector('.sobremim');
-        let elementRect = sobremim.getBoundingClientRect();
-        let isElementVisible = elementRect.top <= window.innerHeight * 1.0 && elementRect.bottom >= 0;
-
+        let isElementVisible = sobremim.getBoundingClientRect().top <= window.innerHeight * 1.5;
+    
+        console.log("Elemento visível:", isElementVisible);
+    
         sobremim.classList.toggle('show-animate', isElementVisible);
+    });
+    
+    
 
-        setTimeout(function() {
-            isScrolling = false;
-        }, 100); 
-    }
-});
