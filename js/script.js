@@ -70,7 +70,7 @@ window.addEventListener('scroll', function() {
 
         let sobremim = document.querySelector('.sobremim');
         let elementRect = sobremim.getBoundingClientRect();
-        let isElementVisible = elementRect.top <= window.innerHeight * 0.9 && elementRect.bottom >= 0;
+        let isElementVisible = elementRect.top <= window.innerHeight * 1.0 && elementRect.bottom >= 0;
 
         sobremim.classList.toggle('show-animate', isElementVisible);
 
