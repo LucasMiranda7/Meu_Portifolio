@@ -62,14 +62,40 @@ window.onscroll = () => {
 }
 
     // animation sobremim on scroll
-    window.addEventListener('scroll', function() {
-        let sobremim = document.querySelector('.sobremim');
-        let isElementVisible = sobremim.getBoundingClientRect().top <= window.innerHeight * 1.1;
-    
-        console.log("Elemento visível:", isElementVisible);
-    
-        sobremim.classList.toggle('show-animate', isElementVisible);
-    });
+    let isScrolling = false;
+
+function handleScroll() {
+    let sobremim = document.querySelector('.sobremim');
+    let elementRect = sobremim.getBoundingClientRect();
+    let isElementVisible = elementRect.top <= window.innerHeight * 0.9 && elementRect.bottom >= 0;
+
+    sobremim.classList.toggle('show-animate', isElementVisible);
+}
+
+function throttle(func, wait) {
+    let lastTime = 0;
+
+    return function() {
+        const currentTime = new Date().getTime();
+
+        if (currentTime - lastTime >= wait) {
+            func();
+            lastTime = currentTime;
+        }
+    };
+}
+
+window.addEventListener('scroll', function() {
+    if (!isScrolling) {
+        isScrolling = true;
+
+        requestAnimationFrame(function() {
+            handleScroll();
+            isScrolling = false;
+        });
+    }
+});
+
     
     
 
