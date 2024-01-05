@@ -64,7 +64,7 @@ window.onscroll = () => {
     // animation sobremim on scroll
     window.addEventListener('scroll', function() {
         let sobremim = document.querySelector('.sobremim');
-        let isElementVisible = sobremim.getBoundingClientRect().top <= window.innerHeight * 1.5;
+        let isElementVisible = sobremim.getBoundingClientRect().top <= window.innerHeight * 1.1;
     
         console.log("Elemento visível:", isElementVisible);
     
