@@ -561,19 +561,19 @@ span {
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 42%;
+    width: 35%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 15%;
+    width: 12%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 70%;
+    width: 58%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 68%;
+    width: 53%;
 }
 
 /* Projetos section css --------------------------- */
@@ -819,7 +819,7 @@ span {
 }
 
 .info-box span {
-    font-size: 10px;
+    font-size: 12px;
     color: var(--main-color);
 }
 
