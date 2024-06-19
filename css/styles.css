@@ -455,7 +455,7 @@ span {
     padding-top: .10px;
 }
 
-/* Skills section css --------------------------- */
+/* Skills section css ---------------------------
 
 .skills {
     min-height: auto;
@@ -574,7 +574,7 @@ span {
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
     width: 53%;
-}
+} */
 
 /* Projetos section css --------------------------- */
    
@@ -683,7 +683,7 @@ span {
 }
 
 .projet-content p {
-    font-size: .8rem;
+    font-size: 1em;
     margin: 9px 0 17px 0;
 }
 
@@ -710,6 +710,7 @@ span {
 .contato {
     min-height: 22cm;
     padding-bottom: 7rem;
+    transform: translate(0, -2%);
     }
 
 .contato h2 {
@@ -1125,6 +1126,8 @@ section:nth-child(odd) .animate.scroll,
 }
 
 @media (max-width: 371px) {
+
+
     .home {
         justify-content: center;
     }

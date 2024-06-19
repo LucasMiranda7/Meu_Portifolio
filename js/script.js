@@ -61,18 +61,20 @@ window.onscroll = () => {
     contato.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
 
-    // animation sobremim on scroll
-    let isScrolling = false;
+     // animation sobremim on scroll
+     let isScrolling = false;
 
-function handleScroll() {
-    let sobremim = document.querySelector('.sobremim');
-    let elementRect = sobremim.getBoundingClientRect();
-    let isElementVisible = elementRect.top <= window.innerHeight * 0.9 && elementRect.bottom >= 0;
+     function handleScroll() {
+         let sobremim = document.querySelector('.sobremim');
+         let elementRect = sobremim.getBoundingClientRect();
+         let isElementVisible = elementRect.top <= window.innerHeight * 0.9 && elementRect.bottom >= 0;
+     
+         console.log('Element Visible:', isElementVisible); // Adicione esta linha para depurar
+     
+         sobremim.classList.toggle('show-animate', isElementVisible);
+     }
+     
 
-    console.log('Element Visible:', isElementVisible); // Adicione esta linha para depurar
-
-    sobremim.classList.toggle('show-animate', isElementVisible);
-}
 
 function throttle(func, wait) {
     let lastTime = 0;
@@ -97,7 +99,3 @@ window.addEventListener('scroll', function() {
         });
     }
 });
-
-    
-    
-
