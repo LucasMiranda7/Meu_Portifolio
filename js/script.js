@@ -49,53 +49,5 @@ window.onscroll = () => {
     let footer = document.querySelector('footer');
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
-
-    // animation projetos on scroll
-    let projetos = document.querySelector('projetos');
-
-    projetos.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
-    
-    // animation contato on scroll 
-    let contato = document.querySelector('contato');
-    
-    contato.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
 
-     // animation sobremim on scroll
-     let isScrolling = false;
-
-     function handleScroll() {
-         let sobremim = document.querySelector('.sobremim');
-         let elementRect = sobremim.getBoundingClientRect();
-         let isElementVisible = elementRect.top <= window.innerHeight * 0.9 && elementRect.bottom >= 0;
-     
-         console.log('Element Visible:', isElementVisible); // Adicione esta linha para depurar
-     
-         sobremim.classList.toggle('show-animate', isElementVisible);
-     }
-     
-
-
-function throttle(func, wait) {
-    let lastTime = 0;
-
-    return function() {
-        const currentTime = new Date().getTime();
-
-        if (currentTime - lastTime >= wait) {
-            func();
-            lastTime = currentTime;
-        }
-    };
-}
-
-window.addEventListener('scroll', function() {
-    if (!isScrolling) {
-        isScrolling = true;
-
-        requestAnimationFrame(function() {
-            handleScroll();
-            isScrolling = false;
-        });
-    }
-});
