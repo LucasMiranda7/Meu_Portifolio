@@ -630,7 +630,7 @@ span {
 
 .projet-box {
     position: relative;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     background: #292e33;
     display: flex;
